@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Node<T> {
   T val;
   Node<T> next;
@@ -10,8 +12,14 @@ class Node<T> {
 
 class Source {
   public static int sumList(Node<Integer> head) {
-    // todo
-    return;
+    Integer sum = 0;
+    Node<Integer> curr = head;
+
+    while(curr != null) {
+      sum += curr.val;
+      curr = curr.next;
+    }
+    return sum;
   }
 
   public static void main(String[] args) {
